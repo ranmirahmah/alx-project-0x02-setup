@@ -1,21 +1,28 @@
-import React from "react";
 import Link from "next/link";
+import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <header className="flex items-center justify-between px-6 py-4 shadow-md">
-      {/* Logo / Title */}
-      <h1 className="text-xl font-bold">My Project</h1>
+    <header className="bg-gray-900 text-white p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* Logo/Brand */}
+        <h1 className="text-lg font-bold">
+          <Link href="/">MyApp</Link>
+        </h1>
 
-      {/* Navigation Links */}
-      <nav className="flex gap-6">
-        <Link href="/home" className="text-gray-700 hover:text-blue-600">
-          Home
-        </Link>
-        <Link href="/about" className="text-gray-700 hover:text-blue-600">
-          About
-        </Link>
-      </nav>
+        {/* Navigation Links */}
+        <nav className="flex space-x-6">
+          <Link href="/home" className="hover:text-gray-300">
+            Home
+          </Link>
+          <Link href="/about" className="hover:text-gray-300">
+            About
+          </Link>
+          <Link href="/posts" className="hover:text-gray-300">
+            Posts
+          </Link>
+        </nav>
+      </div>
     </header>
   );
 };
